@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/2025-06-29/(.*)", "destination": "/2025-06-29/$1" },
+    { "source": "/2025-06-29/(.*)", "destination": "/2025-06-29/index.html" },
     { "source": "/", "destination": "/2025-06-29/" }
   ],
   "buildCommand": "pnpm run build",

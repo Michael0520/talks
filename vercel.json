@@ -1,6 +1,7 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/2025-06-29/(.*)", "destination": "/2025-06-29/$1" },
+    { "source": "/", "destination": "/2025-06-29/" }
   ],
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist"

@@ -3,7 +3,7 @@
   "private": true,
   "packageManager": "pnpm@10.12.1",
   "scripts": {
-    "build": "rimraf dist && pnpm -r run build",
+    "build": "node -e \"import('fs').then(fs => fs.rmSync('dist', {recursive: true, force: true}))\" && pnpm -r run build",
     "dev": "esno scripts/picker.ts dev --open",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint .",

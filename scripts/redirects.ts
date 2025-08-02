@@ -18,7 +18,7 @@ const bases = (await Promise.all(
     const command = json.scripts?.build
     if (!command)
       return
-    const base = command.match(/ --base (.*?)\s/)?.[1]
+    const base = command.match(/ --base (.*?)(\s|$)/)?.[1]
     if (!base)
       return
     return {
@@ -38,25 +38,25 @@ const redirects = bases
       parts.push(`
 [[redirects]]
 from = "${base}pdf"
-to = "https://github.com/antfu/talks/blob/main/${dir}/${pdfFile}?raw=true"
+to = "https://github.com/luoziming/talks/blob/main/${dir}/${pdfFile}?raw=true"
 status = 302
 
 [[redirects]]
 from = "/${dir}/pdf"
-to = "https://github.com/antfu/talks/blob/main/${dir}/${pdfFile}?raw=true"
+to = "https://github.com/luoziming/talks/blob/main/${dir}/${pdfFile}?raw=true"
 status = 302`)
     }
 
     parts.push(`
 [[redirects]]
 from = "${base}src"
-to = "https://github.com/antfu/talks/tree/main/${dir}"
+to = "https://github.com/luoziming/talks/tree/main/${dir}"
 status = 302`)
 
     parts.push(`
 [[redirects]]
 from = "${dir}"
-to = "https://talks.antfu.me${base}"
+to = "https://michaello.me${base}"
 status = 301
 
 [[redirects]]
@@ -81,7 +81,7 @@ ${redirects}
 
 [[redirects]]
 from = "/"
-to = "https://antfu.me/talks"
+to = "https://michaello.me/talks"
 status = 302
 `
 

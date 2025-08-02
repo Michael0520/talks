@@ -1,7 +1,9 @@
 {
   "rewrites": [
-    { "source": "/2025-06-29/(.*)", "destination": "/2025-06-29/index.html" },
-    { "source": "/", "destination": "/2025-06-29/" }
+    { "source": "/talks/([^/]+)/(.*)", "destination": "/$1/$2" },
+    { "source": "/talks/([^/]+)", "destination": "/$1/" },
+    { "source": "/talks", "destination": "/talks/" },
+    { "source": "/", "destination": "/talks/2025-06-29/" }
   ],
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist"

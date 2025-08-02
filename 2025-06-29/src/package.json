@@ -4,6 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "npx @slidev/cli",
-    "build": "npx @slidev/cli build --base /talks/2025-06-29 --out ../../dist/2025-06-29"
+    "build": "npx @slidev/cli build --base /2025-06-29 --out ../../dist/2025-06-29"
   }
 }

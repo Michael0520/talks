@@ -1,6 +1,7 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/2025-06-29/" }
+    { "source": "/", "destination": "/2025-06-29/" },
+    { "source": "/:talk/:path*", "destination": "/:talk/index.html" }
   ],
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist"
